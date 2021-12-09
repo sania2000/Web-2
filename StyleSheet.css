@@ -1,0 +1,194 @@
+﻿p {
+    word-break: break-word;
+}
+
+
+
+#header {
+    height: 350px;
+    padding-top: 2em;
+    background-image: url(images/background.jpg);
+    background-image: linear-gradient(hsla(300, 80%, 20%, 0.8), 80%, coral),
+        url(images/background.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+}
+
+#header svg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+#cntnt {
+    text-align: left;
+    color: white;
+    padding: 6em;
+    font-weight: bolder;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: unset;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+}
+.act::before {
+    content: "\25AA";
+    color: #b066f2;
+}
+
+.single-content {
+    position: relative;
+    transition: 0.3s;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+.single-content .text-content,
+.single-content:after {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+}
+.single-content:after {
+    content: "";
+    display: block;
+    background: crimson;
+    top: 20px;
+    bottom: 20px;
+    opacity: 0;
+    transform: skew(0, 0, 0, 100deg);
+    transition: 0.4s;
+}
+.single-content:hover:after {
+    opacity: 0.9;
+    transform: skew(0, 0, 0, 0deg);
+}
+.single-content img {
+    width: 100%;
+    height: auto;
+}
+.text-content {
+    top: 45%;
+    opacity: 0;
+    z-index: 1;
+    transform: translate(10%, -30%);
+    transition: 0.3s;
+    text-align: center;
+}
+.single-content:hover .text-content {
+    opacity: 1;
+    transform: translate(0, -50%);
+    transition-delay: 0.3s;
+}
+
+.img-2 {
+    left: 30px;
+    top: 30px;
+}
+
+.img-22 {
+    right: -30px;
+    bottom: -30px;
+    z-index: -1;
+}
+
+.img-hover-box {
+    top: 0;
+    right: -30px;
+    position: absolute;
+    z-index: 100;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+}
+.img-hover-box:hover + .img-2 {
+    z-index: -1;
+}
+
+.img-hover-box:hover + .img-22 {
+    z-index: 0;
+}
+
+.cntct {
+    background-color: #2d3034;
+}
+
+.quotation-icon {
+    font-size: 32pt;
+}
+
+.top-70 {
+    top: 70%;
+}
+
+button.carousel-control-next {
+    right: -128px;
+}
+
+button.carousel-control-prev {
+    left: -128px;
+}
+
+.border-0.card.mt-5.shadow {
+    margin: 32px;
+}
+
+.single-content {
+    color: black !important;
+}
+
+.text-content p {
+    margin: 0 !important;
+}
+
+.single-content:after {
+    background: #ffffffad;
+}
+
+.text-content {
+    transform: translate(0%, 60%);
+}
+
+
+
+#containerx {
+display: flex;
+
+overflow: auto;
+}
+
+
+#flex-scroll {
+
+  padding: 30px 20px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+}
+
+.box {
+  width: 75px;
+  height: 75px;
+}
+
+#sania-card{
+    transform:scale(1.02)
+}
+
+.box:nth-child(3n-2) { background-color: #EF5350; }
+.box:nth-child(3n-1) { background-color: #2E7D32; }
+.box:nth-child(3n) { background-color: #03A9F4; }
+
+
+

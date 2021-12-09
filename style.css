@@ -1,0 +1,307 @@
+@font-face {
+  font-family: Shabnam;
+  font-weight: normal;
+  font-style: normal;
+  src: url("fonts/shabnam.woff") format("woff"),
+    url("fonts/shabnam.woff2") format("woff2"),
+    url("fonts/shabnam.ttf") format("trutype"), url("fonts/shabnam.eot"),
+    url("fonts/shabnam.eot?#iefix") format("embedded-opentype");
+}
+@font-face {
+  font-family: Shabnam;
+  font-weight: bold;
+  font-style: normal;
+  src: url("fonts/shabnam-bold.woff") format("woff"),
+    url("fonts/shabnam-bold.woff2") format("woff2"),
+    url("fonts/shabnam-bold.ttf") format("trutype"),
+    url("fonts/shabnam-bold.eot"),
+    url("fonts/Shabnam-Bold.eot?#iefix") format("embedded-opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Shabnam", Arial, sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 800px;
+  min-height: 700px;
+}
+.comments-section {
+  background-color: white;
+  text-align: center;
+  height: 70vh;
+  min-height: 600px;
+}
+.footer-section {
+  background-color: rgb(51, 48, 48);
+  height: 30vh;
+  min-height: 250px;
+  text-align: center;
+}
+.footer-information {
+  color: rgb(170, 167, 167);
+  padding-top: 160px;
+  font-size: 16px;
+  line-height: 35px;
+}
+.comments-header h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 60px;
+  padding-top: 40px;
+}
+.comments-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 300px;
+}
+.navigation-button {
+  padding: 15px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgb(245, 192, 59);
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  position: relative;
+  margin: auto 20px;
+  cursor: pointer;
+}
+.slide {
+  background-color: white;
+  box-shadow: 2px 2px 20px 1px rgb(212, 211, 211),
+    -2px -2px 20px 1px rgb(212, 211, 211);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 300px;
+}
+#slide2,
+#slide3 {
+  display: none;
+}
+.slide-image {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.slide-image img {
+  border-radius: 5px;
+  width: 280px;
+}
+.slide-description {
+  width: auto;
+  font-size: 16px;
+  color: rgb(102, 97, 97);
+  text-align: right;
+  padding: 5px 20px;
+  margin-top: -130px;
+}
+.quotes-symbol {
+  color: white;
+  background-color: rgb(245, 192, 59);
+  font-weight: normal;
+  border-radius: 50%;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  font-size: 45px;
+  margin-top: 130px;
+  margin-left: 20px;
+}
+.subscription-section {
+  background-color: rgb(20, 121, 216);
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 5px 1px black;
+  top: 64vh;
+  height: 110px;
+  width: 640px;
+}
+.subscription-form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.subscription-section h3 {
+  color: white;
+  margin: 10px 20px 20px 0px;
+}
+.subscription-form input {
+  border-radius: 3px;
+  background-color: rgb(206, 232, 255);
+  border: none;
+  width: 150px;
+  padding: 8px 15px;
+}
+#subscription-button {
+  text-decoration: none;
+  background-color: rgb(245, 192, 59);
+  color: rgb(0, 0, 0);
+  border-radius: 3px;
+  width: 100px;
+  padding: 5px 0;
+}
+.modal-section {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.subscription-modal {
+  margin: 40vh auto;
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 0.1px 0.1px 2px 0.1px black;
+  padding: 20px;
+  border-radius: 3px;
+}
+#close-modal {
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(121, 121, 121);
+}
+#close-modal:hover {
+  color: black;
+}
+.modal-button {
+  text-decoration: none;
+  padding: 5px 20px;
+  border: 1px solid rgb(163, 159, 159);
+  background-color: rgb(245, 192, 59);
+  border-radius: 2px;
+  float: left;
+  margin: 25px 5px;
+}
+.toast-message {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  top: 500px;
+  left: 50%;
+  background-color: rgba(15, 78, 15, 0.836);
+  color: white;
+  padding: 10px 30px;
+  font-size: 14px;
+  height: 40px;
+  min-width: 300px;
+  margin: 0px -150px;
+  text-align: center;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 799px) and (min-width: 601px) {
+  .comments-container {
+    width: 600px;
+  }
+  .slide {
+    height: 250px;
+  }
+  .slide-image img {
+    width: 220px;
+  }
+  .slide-description {
+    margin-top: -80px;
+  }
+  .navigation-button {
+    margin: auto 10px;
+  }
+  .quotes-symbol {
+    margin-left: 40px;
+  }
+  .subscription-section {
+    height: 110px;
+    width: 560px;
+  }
+  .subscription-form input {
+    width: 140px;
+  }
+  #subscription-button {
+    width: 80px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .comments-section {
+    height: 1300px;
+  }
+  .footer-section {
+    height: 250px;
+  }
+  .footer-information {
+    padding-top: 120px;
+  }
+  .comments-container {
+    width: 90%;
+    height: fit-content;
+  }
+  .slide {
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    width: 95%;
+    height: 700px;
+  }
+  .slide-image img {
+    width: 350px;
+  }
+  .slide-description {
+    width: 300px;
+    font-size: 20px;
+    padding: 50px 10px;
+    margin-top: 0px;
+  }
+  .navigation-button {
+    display: none;
+  }
+  .quotes-symbol {
+    margin-top: -230px;
+    margin-left: 0px;
+  }
+  .subscription-section {
+    display: block;
+    border-radius: 2px;
+    top: 900px;
+    height: 450px;
+    width: 85%;
+  }
+  .subscription-form {
+    flex-direction: column;
+  }
+  .subscription-section h3 {
+    margin: 30px 0;
+    text-align: center;
+  }
+  .subscription-form input {
+    width: 90%;
+    padding: 15px 15px;
+    margin: 20px;
+  }
+  #subscription-button {
+    margin-top: 10px;
+  }
+  .toast-message {
+    top: 780px;
+  }
+}
